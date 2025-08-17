@@ -1,0 +1,134 @@
+/* ==== NAVBAR ==== */
+.bg-black {
+  background-color: #000000 !important;
+}
+
+/* Logo responsivo */
+.brand-logo {
+  height: auto;
+  display: block;
+  max-width: 100%;
+}
+@media (min-width: 992px) {
+  .brand-logo {
+    width: 150px;
+  }
+} /* Desktop */
+@media (min-width: 768px) and (max-width: 991px) {
+  .brand-logo {
+    width: 140px;
+  }
+} /* Tablet */
+@media (max-width: 767px) {
+  .brand-logo {
+    width: 100px;
+  }
+} /* Móvil */
+
+/* Tipografía y compensación por navbar fija */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  padding-top: 70px;
+}
+
+/* ===== HERO SECTION ===== */
+#Hero-Section {
+  min-height: 75vh; /* alto visible */
+  color: #fff;
+
+  /* overlay + imagen (sin ::before) */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("../img/Foto-Marcee.jpeg"); /* cambia a .jpg si corresponde */
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left center;
+}
+
+@media (max-width: 768px) {
+  /* en móvil centramos el rostro */
+  #Hero-Section {
+    background-position: center top;
+  }
+}
+
+/* ===== SECCIÓN MIS TRABAJOS ===== */
+#Mis-trabajos .image-top {
+  height: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* ===== CONTACTO ===== */
+#Contacto form label {
+  font-weight: 700;
+  color: #222;
+}
+@media (max-width: 768px) {
+  #Contacto form label {
+    font-weight: 400;
+  }
+  .navbar-brand {
+    width: 100px;
+  }
+}
+
+/* ===== CARDS GENÉRICAS ===== */
+.row .col > .card {
+  height: 100%;
+}
+
+.card {
+  border-radius: 12px;
+  border: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Íconos dentro de cards */
+.card i {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.card i:hover {
+  transform: scale(1.15);
+  color: #0dcaf0;
+}
+
+/* Imágenes superiores uniformes */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* Tipografía de cards */
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+.card-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 576px) {
+  .card-img-top {
+    height: 180px;
+  }
+  .card-title {
+    font-size: 1.15rem;
+  }
+  .card-text {
+    font-size: 0.93rem;
+  }
+}
